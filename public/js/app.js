@@ -6,6 +6,7 @@ const temperature = document.querySelector('.temperature')
 const feelslike = document.querySelector('.feelslike')
 const weather = document.querySelector('.weather')
 const errorMessage = document.querySelector('.error-message')
+const weatherIcon = document.querySelector('.weathericon')
 
 
 weatherForm.addEventListener('submit', (e) => {
@@ -16,6 +17,7 @@ weatherForm.addEventListener('submit', (e) => {
     temperature.textContent = ''
     feelslike.textContent = ''
     weather.textContent = 'Loading...'
+    weatherIcon.src = ''
 
     const location = search.value
 
@@ -31,6 +33,7 @@ weatherForm.addEventListener('submit', (e) => {
                 temperature.textContent = data.forecast.temperature + '°C'
                 feelslike.textContent = data.forecast.feelslike + '°C'
                 weather.textContent = data.forecast.weather
+                weatherIcon.src = data.forecast.icon
             }
         })
     })

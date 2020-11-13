@@ -82,3 +82,8 @@ hr{
 h1.error-message {
     font-size: 2em;
 }
+
+.weathericon {
+    height: 100px;
+    margin-right: 20px;
+}
